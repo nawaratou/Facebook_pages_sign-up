@@ -1,0 +1,323 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: gainsboro;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+}
+
+/* Conteneur principal */
+.container {
+  width: 25%;
+  min-width: 400px;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* En-tête */
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 1.6rem;
+}
+
+header p {
+  color: gray;
+}
+
+/* Ligne séparatrice */
+hr.separateur {
+  width: 98%;
+  height: 1px;
+  border: none;
+  background-color: lightgray;
+  border-radius: 2px;
+  margin: 1rem 0;
+}
+
+/* Bloc prénom / nom */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.input1,
+.input2 {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  font-size: 1rem;
+  width: 100%;
+  flex: 1;
+}
+
+.inputs-bas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.input3,
+.input4 {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  font-size: 1rem;
+}
+
+/* Informations */
+.info {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.info p {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+/* Date de naissance */
+.date-naissance {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 0.8rem;
+  width: 100%;
+}
+
+.date-naissance select {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Genre */
+.genre {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 0.8rem;
+  width: 100%;
+}
+
+.genre label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+  gap: 8px;
+  flex: 1;
+  text-align: center;
+}
+
+.genre label:hover {
+  border-color: #007BFF;
+}
+
+.genre input[type="radio"] {
+  margin-right: 0;
+  cursor: pointer;
+}
+
+/* Politique */
+.politique {
+  width: 100%;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.politique p {
+  font-size: 0.8rem;
+  color: gray;
+  line-height: 1.4;
+}
+
+.politique a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.politique a:hover {
+  text-decoration: underline;
+}
+
+/* Bouton */
+.inscrire {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 12px 0;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.inscrire:hover {
+  background-color: #23913b;
+}
+
+/* Responsive - Mobile First Approach */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 35%;
+    min-width: 380px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 50%;
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 70%;
+    min-width: 320px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .search-box {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .date-naissance {
+    flex-wrap: wrap;
+  }
+  
+  .date-naissance select {
+    min-width: calc(33.333% - 7px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    min-width: unset;
+    padding: 1.5rem 1rem;
+  }
+  
+  header h1 {
+    font-size: 1.4rem;
+  }
+  
+  .date-naissance {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .date-naissance select {
+    width: 100%;
+  }
+  
+  .genre {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .genre label {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  
+  .input1,
+  .input2,
+  .input3,
+  .input4 {
+    font-size: 0.9rem;
+  }
+  
+  .politique p {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+    align-items: flex-start;
+    min-height: 100vh;
+    height: auto;
+  }
+  
+  .container {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    margin: 0.5rem 0;
+  }
+  
+  header h1 {
+    font-size: 1.3rem;
+  }
+  
+  header p {
+    font-size: 0.9rem;
+  }
+  
+  .inscrire {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
+
+/* Pour les très petits écrans */
+@media screen and (max-width: 360px) {
+  .container {
+    padding: 1rem 0.8rem;
+  }
+  
+  header h1 {
+    font-size: 1.2rem;
+  }
+  
+  .input1,
+  .input2,
+  .input3,
+  .input4 {
+    padding: 8px;
+  }
+}
