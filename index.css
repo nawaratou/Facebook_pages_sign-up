@@ -281,3 +281,38 @@ input:focus, select:focus {
     text-align: start;
   }
 }
+@media screen and (max-width: 600px) {
+   .container {
+    width: 60%;
+    min-width: 330px;
+    padding: 1.5rem 1rem;
+  }
+
+  .recherche-box {
+    flex-direction: row; 
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .inputs-bas {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+  }
+
+  .date-naissance {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .genre {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 40%;
+    margin-top: 1.5rem; 
+  }
+
+  .radio {
+    text-align: start;
+  }
+}
