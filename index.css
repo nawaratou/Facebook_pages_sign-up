@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   display: flex;
   justify-content: center;
@@ -107,7 +106,10 @@ input:focus, select:focus {
   background: #fff;
   font-size: 0.9rem;
 }
-
+.femme{
+  text-align: center;
+  margin-left: 0.6rem;
+}
 /*  GENRE */
 .genre {
   display: flex;
@@ -121,6 +123,9 @@ input:focus, select:focus {
 }
 .genr{
   margin-top: 1rem;
+}
+.femme{
+  margin-left: -2rem;
 }
 .radio {
   flex: 1;
@@ -173,13 +178,95 @@ input:focus, select:focus {
   transition: 0.3s;
 }
 
-.inscrire:hover {
+.inscrire {
   background-color: #36a420;
 }
 
 
+
+@media screen and (max-width: 768px) {
+   .container {
+    width: 60%;
+    min-width: 330px;
+    padding: 1.5rem 1rem;
+  }
+
+  .recherche-box {
+    flex-direction: row; 
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .inputs-bas {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+  }
+
+  .date-naissance {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .genre {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 40%;
+    margin-top: 1.5rem; 
+  }
+
+  .radio {
+    text-align: start;
+  }
+}
+@media screen and (max-width: 600px) {
+   body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto; 
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1rem;
+    margin: 0;
+  }
+   .container {
+    width: 90%;
+    min-width: 320px;
+    padding: 1.2rem;
+  }
+
+  .recherche-box {
+    flex-direction: row; 
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .inputs-bas {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+  }
+
+  .date-naissance {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .genre {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 40%;
+    margin-top: 1.5rem; 
+  }
+
+  .radio {
+    text-align: start;
+  }
+}
 @media (max-width: 500px) {
-  html, body {
+   body {
     width: 100%;
     min-height: 100vh;
     overflow-y: auto; 
@@ -243,86 +330,5 @@ input:focus, select:focus {
   .inscrire {
     width: 100%;
     padding: 12px;
-  }
-}
-@media screen and (max-width: 768px) {
-   .container {
-    width: 60%;
-    min-width: 330px;
-    padding: 1.5rem 1rem;
-  }
-
-  .recherche-box {
-    flex-direction: row; 
-    gap: 0.5rem;
-    width: 100%;
-  }
-
-  .inputs-bas {
-    flex-direction: column;
-    gap: 0.6rem;
-    width: 100%;
-  }
-
-  .date-naissance {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .genre {
-    flex-direction: column;
-    gap: 0.6rem;
-    width: 40%;
-    margin-top: 1.5rem; 
-  }
-
-  .radio {
-    text-align: start;
-  }
-}
-@media screen and (max-width: 600px) {
-   html, body {
-    width: 100%;
-    min-height: 100vh;
-    overflow-y: auto; 
-    background: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 1rem;
-    margin: 0;
-  }
-   .container {
-    width: 90%;
-    min-width: 320px;
-    padding: 1.2rem;
-  }
-
-  .recherche-box {
-    flex-direction: row; 
-    gap: 0.5rem;
-    width: 100%;
-  }
-
-  .inputs-bas {
-    flex-direction: column;
-    gap: 0.6rem;
-    width: 100%;
-  }
-
-  .date-naissance {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .genre {
-    flex-direction: column;
-    gap: 0.6rem;
-    width: 40%;
-    margin-top: 1.5rem; 
-  }
-
-  .radio {
-    text-align: start;
   }
 }
